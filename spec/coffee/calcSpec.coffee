@@ -1,6 +1,9 @@
-calc = require '../../dist/js/calc'
+{Calc} = require '../../dist/js/Calc'
 
-describe "calc", ->
-  it "should add 1 and 1 correctly", ->
-    expect calc.add 1, 1
+describe "Calc", ->
+  beforeEach ->
+    @calc = new Calc
+
+  it "should add correctly", ->
+    expect @calc.add 1, 1
       .toBe 2
