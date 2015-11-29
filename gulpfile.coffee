@@ -13,8 +13,7 @@ gulp.task 'clean', ->
 gulp.task 'tests', ->
   gulp.src coffeeTests, {base: testDir}
     .pipe coffee {bare: true}
-    .on 'error', ->
-      console.log error
+      .on 'error', -> console.log error
     .pipe gulp.dest testOut
 
 gulp.task 'watch', ->
