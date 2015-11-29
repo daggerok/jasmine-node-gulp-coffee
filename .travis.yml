@@ -4,7 +4,7 @@ cache:
   directories:
     - node_modules
 node_js:
-  - "5.0"
+  - "5.1"
 before_script:
   - npm install
   - export CHROME_BIN=chromium-browser
