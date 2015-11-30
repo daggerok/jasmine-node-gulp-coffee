@@ -2,7 +2,7 @@
   "name": "jasmine-node-gulp-coffee",
   "version": "1.0.0",
   "scripts": {
-    "test": "./node_modules/.bin/jasmine-node --color --verbose --coffee spec/**/*.coffee",
+    "test": "./node_modules/.bin/jasmine-node --color --verbose --coffee spec",
     "gulp": "gulp --require coffee-script/register",
     "clean": "gulp clean",
     "build": "gulp clean && gulp",
