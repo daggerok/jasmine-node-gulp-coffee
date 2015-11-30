@@ -2,12 +2,11 @@
   "name": "jasmine-node-gulp-coffee",
   "version": "1.0.0",
   "scripts": {
-    "jasmine": "jasmine-node --color --verbose --coffee spec/coffee",
+    "test": "jasmine-node --color --verbose --coffee spec/coffee",
     "gulp": "gulp --require coffee-script/register",
     "clean": "gulp clean",
     "build": "gulp clean && gulp",
-    "watch": "npm run build && gulp watch",
-    "test": "npm run build && npm run jasmine"
+    "watch": "npm run build && gulp watch"
 
   },
   "devDependencies": {

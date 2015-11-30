@@ -1,4 +1,4 @@
-calculator = require '../../dist/js/calculator'
+calculator = require '../../src/coffee/calculator.coffee'
 
 describe 'calculator', ->
   it 'should add correctly', ->

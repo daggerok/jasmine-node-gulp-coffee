@@ -1,4 +1,4 @@
-{Calc} = require '../../dist/js/Calc'
+{Calc} = require '../../src/coffee/Calc.coffee'
 
 describe "Calc", ->
   beforeEach ->
