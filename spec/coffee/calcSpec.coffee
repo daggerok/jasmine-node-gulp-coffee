@@ -1,4 +1,4 @@
-{Calc} = require '../../src/coffee/Calc.coffee'
+{Calc} = require './../../src/coffee/Calc.coffee'
 
 describe "Calc", ->
   beforeEach ->
