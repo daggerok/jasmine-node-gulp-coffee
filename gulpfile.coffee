@@ -2,13 +2,14 @@ gulp = require 'gulp'
 coffee = require 'gulp-coffee'
 remove = require 'gulp-rimraf'
 
-srcDir = 'src/coffee/'
-sources = srcDir + '**/*.coffee'
-outDir = 'dist/js/'
+dir = 'scripts/'
+src = 'src/' + dir
+scripts = src + '**/*.coffee'
+outDir = 'dist/' + dir
 
-specDir = 'spec/coffee/'
-specs = specDir + '**/*Spec.coffee'
-specOut = 'out/spec/'
+spec = 'spec/' + dir
+specs = spec + '**/*Spec.coffee'
+specOut = 'out/' + dir
 
 gulp.task 'clean', ->
   gulp.src [
@@ -17,20 +18,20 @@ gulp.task 'clean', ->
     ]
     .pipe remove {force: true}
 
-gulp.task 'sources', ->
-  gulp.src sources, {base: srcDir}
+gulp.task 'scripts', ->
+  gulp.src scripts, {base: src}
     .pipe coffee {bare: true}
       .on 'error', -> console.log error
     .pipe gulp.dest outDir
 
 gulp.task 'specs', ->
-  gulp.src specs, {base: specDir}
+  gulp.src specs, {base: spec}
     .pipe coffee {bare: true}
       .on 'error', -> console.log error
     .pipe gulp.dest specOut
 
 gulp.task 'watch', ->
-  gulp.watch sources, ['sources']
+  gulp.watch sources, ['scripts']
   gulp.watch specs, ['specs']
 
-gulp.task 'default', ['sources', 'specs']
+gulp.task 'default', ['scripts', 'specs']
