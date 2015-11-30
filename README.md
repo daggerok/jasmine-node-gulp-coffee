@@ -2,4 +2,4 @@ jasmine-node-gulp-coffee [![build](https://travis-ci.org/daggerok/jasmine-node-g
 ==========
     $ git clone ... && cd ...
     $ npm i
-    $ npm test
+    $ npm run test
