@@ -13,10 +13,7 @@ spec = 'spec/' + dir
 specs = spec + '**/*Spec.coffee'
 
 gulp.task 'clean', ->
-  gulp.src [
-      outDir
-      specOut
-    ]
+  gulp.src outDir
     .pipe remove {force: true}
 
 gulp.task 'scripts', ->
@@ -31,7 +28,7 @@ gulp.task 'specs', ->
       .on 'error', -> console.log error
 
 gulp.task 'watch', ->
-  gulp.watch sources, ['scripts']
+  gulp.watch scripts, ['scripts']
   gulp.watch specs, ['specs']
 
 gulp.task 'default', ['scripts', 'specs']
