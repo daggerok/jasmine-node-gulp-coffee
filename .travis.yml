@@ -3,4 +3,7 @@ language: node_js
 node_js: "5.1"
 script:
   - npm run clean
+  - ls -la
   - npm run test
+  - ls -lah spec
+  - ls -lah spec/scripts
