@@ -5,5 +5,5 @@ describe "Calc", ->
     @calc = new Calc
 
   it "should add correctly", ->
-    expect @calc.add 1, 1
-      .toBe 2
+    expect @calc.add 2, 3
+      .toBe 5

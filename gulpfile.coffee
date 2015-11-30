@@ -3,13 +3,13 @@ coffee = require 'gulp-coffee'
 remove = require 'gulp-rimraf'
 jasmine = require 'gulp-jasmine'
 
-dir = 'scripts/'
-src = 'src/' + dir
+coffeeDir = 'scripts/'
+src = 'src/' + coffeeDir
 coffeeScripts = '**/*.coffee'
 scripts = src + coffeeScripts
-outDir = 'dist/' + dir
+outDir = 'dist/' + coffeeDir
 
-spec = 'spec/' + dir
+spec = 'spec/' + coffeeDir
 specs = spec + '**/*Spec.coffee'
 
 gulp.task 'clean', ->
