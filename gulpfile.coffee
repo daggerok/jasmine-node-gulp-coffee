@@ -1,15 +1,16 @@
 gulp = require 'gulp'
 coffee = require 'gulp-coffee'
 remove = require 'gulp-rimraf'
+jasmine = require 'gulp-jasmine'
 
 dir = 'scripts/'
 src = 'src/' + dir
-scripts = src + '**/*.coffee'
+coffeeScripts = '**/*.coffee'
+scripts = src + coffeeScripts
 outDir = 'dist/' + dir
 
 spec = 'spec/' + dir
 specs = spec + '**/*Spec.coffee'
-specOut = 'out/' + dir
 
 gulp.task 'clean', ->
   gulp.src [
@@ -25,10 +26,9 @@ gulp.task 'scripts', ->
     .pipe gulp.dest outDir
 
 gulp.task 'specs', ->
-  gulp.src specs, {base: spec}
-    .pipe coffee {bare: true}
+  gulp.src specs
+    .pipe jasmine {coffee: true, color: true, verbose: true}
       .on 'error', -> console.log error
-    .pipe gulp.dest specOut
 
 gulp.task 'watch', ->
   gulp.watch sources, ['scripts']
