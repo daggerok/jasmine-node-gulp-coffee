@@ -10,7 +10,7 @@ scripts = src + coffeeScripts
 outDir = 'dist/' + coffeeDir
 
 spec = 'spec/' + coffeeDir
-specs = spec + '**/*Spec.coffee'
+specs = spec + coffeeScripts
 
 gulp.task 'clean', ->
   gulp.src outDir
