@@ -13,4 +13,4 @@ before_script:
 script:
   - npm run clean
   - npm run build
-  - npm run test
+  - node_modules/.bin/jasmine-node out/
