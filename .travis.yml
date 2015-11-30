@@ -1,4 +1,6 @@
 sudo: false
 language: node_js
 node_js: "5.1"
-script: npm run clean && npm run test
+script:
+  - cd /home/travis/build/daggerok/jasmine-node-gulp-coffee
+  - npm run test
