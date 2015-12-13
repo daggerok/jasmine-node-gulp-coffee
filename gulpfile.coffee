@@ -27,8 +27,8 @@ gulp.task 'specs', ->
     .pipe jasmine {coffee: true, color: true, verbose: true}
       .on 'error', -> console.log error
 
-gulp.task 'watch', ->
+gulp.task 'default', ['scripts', 'specs']
+
+gulp.task 'watch', ['default'], ->
   gulp.watch scripts, ['scripts']
   gulp.watch specs, ['specs']
-
-gulp.task 'default', ['scripts', 'specs']
